@@ -13,7 +13,7 @@ namespace :install do
   desc 'install lang-specs, mime types and \'g\', command needs root priviliges'
   task :global do
     cp 'mime/rails.xml', '/usr/share/mime/packages/'
-    %w(rhtml.lang ruby.lang yml.lang).each do |file|
+    %w(rhtml.lang ruby.lang yml.lang ruby_on_rails.lang).each do |file|
       cp 'lang-specs/' + file, '/usr/share/gtksourceview-2.0/language-specs/'
     end
     cp 'bin/g', '/usr/bin/g'
